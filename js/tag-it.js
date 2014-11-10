@@ -267,7 +267,7 @@
 
                         // Autocomplete will create its own tag from a selection and close automatically.
                         if (!(that.options.autocomplete.autoFocus && that.tagInput.data('autocomplete-open'))) {
-                            that.tagInput.autocomplete('close');
+                            // that.tagInput.autocomplete('close');
                             that.createTag(that._cleanedInput());
                         }
                     }
@@ -294,13 +294,13 @@
                 // while tagSource is left null by default.
                 autocompleteOptions.source = this.options.tagSource || autocompleteOptions.source;
 
-                this.tagInput.autocomplete(autocompleteOptions).bind('autocompleteopen.tagit', function(event, ui) {
-                    that.tagInput.data('autocomplete-open', true);
-                }).bind('autocompleteclose.tagit', function(event, ui) {
-                    that.tagInput.data('autocomplete-open', false);
-                });
+                // this.tagInput.autocomplete(autocompleteOptions).bind('autocompleteopen.tagit', function(event, ui) {
+                //     that.tagInput.data('autocomplete-open', true);
+                // }).bind('autocompleteclose.tagit', function(event, ui) {
+                //     that.tagInput.data('autocomplete-open', false);
+                // });
 
-                this.tagInput.autocomplete('widget').addClass('tagit-autocomplete');
+                // this.tagInput.autocomplete('widget').addClass('tagit-autocomplete');
             }
         },
 
